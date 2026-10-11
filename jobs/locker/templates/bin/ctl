@@ -32,7 +32,7 @@ case $1 in
     mkdir -p ${STORE_DIR}
     export LOCKER_CONFIG="${STORE_DIR}/locker.yml"
 
-    exec chpst -u vcap:vcap locker \
+    exec setpriv --reuid=vcap --regid=vcap --groups=vcap -- locker \
          >>$LOG_DIR/$JOB_NAME.log 2>&1
 
     ;;
