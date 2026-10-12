@@ -20,7 +20,13 @@ case $1 in
     export AUTH_USER="<%= user %>"
 <% end -%>
 <% if_p("locker.password") do |pass| -%>
-    export AUTH_PASS="<%= pass %>"
+    # The password lives in a file readable only by vcap, never in this
+    # script, and reaches locker through its environment, not its arguments.
+    AUTH_PASS_FILE="${JOB_DIR}/config/auth_pass"
+    chown vcap:vcap "${AUTH_PASS_FILE}"
+    chmod 0600 "${AUTH_PASS_FILE}"
+    AUTH_PASS="$(cat "${AUTH_PASS_FILE}")"
+    export AUTH_PASS
 <% end -%>
 <% if_p("locker.ssl_cert") do |cert| -%>
     export SSL_CERT="${JOB_DIR}/config/ssl.crt"

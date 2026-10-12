@@ -5,6 +5,7 @@ packages:
 templates:
   bin/ctl: bin/ctl
   bin/monit_debugger: bin/monit_debugger
+  config/auth_pass.erb: config/auth_pass
   config/ssl.crt.erb: config/ssl.crt
   config/ssl.key.erb: config/ssl.key
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
