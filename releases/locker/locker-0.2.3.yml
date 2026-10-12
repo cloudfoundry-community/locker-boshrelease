@@ -1,0 +1,22 @@
+name: locker
+version: 0.2.3
+commit_hash: 4e338b8
+uncommitted_changes: false
+jobs:
+- name: locker
+  version: 553b5ac94394b205980989c5ab20eb8cc67053e590e37a1f4df37515ac926478
+  fingerprint: 553b5ac94394b205980989c5ab20eb8cc67053e590e37a1f4df37515ac926478
+  sha1: sha256:2ba15b8900cae5ce89466ef48786fff52b5abbdb957ce21bd4f77637ca196e29
+  packages:
+  - locker
+packages:
+- name: locker
+  version: 0e5f6e4bd1724d18c468c023ca48fcc4ca80a5c6fa446ff99a5afd0f85d3e5b6
+  fingerprint: 0e5f6e4bd1724d18c468c023ca48fcc4ca80a5c6fa446ff99a5afd0f85d3e5b6
+  sha1: sha256:8adf7a7db443d3a9b9e0699fa52b193b9b94a682ac5e9841175e16ca0e265c21
+  dependencies: []
+license:
+  version: 20fdcb111df8e915caa4edcaa4cce82674c7cc7a8bcaaa1aaf78dcbdc333c1b4
+  fingerprint: 20fdcb111df8e915caa4edcaa4cce82674c7cc7a8bcaaa1aaf78dcbdc333c1b4
+  sha1: sha256:56de135e50958c06f05c4d9f0e845e8d46d3125f618801eaa3b151a3adb6ae75
+no_compression: false
